@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anathema Translator</title>
+    <link rel="stylesheet" href="astyles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="logo logo-glitch">Anathema Translator</h1>
+            <div class="nav-tabs">
+                <div class="tab active" data-tab="translator">Translator</div>
+                <div class="tab" data-tab="saved">Saved</div>
+                <div class="tab" data-tab="about">About</div>
+            </div>
+        </div>
+        
+        <div class="content active" id="translator">
+            <div class="settings-panel">
+                <div class="settings-header" id="toggleSettings">
+                    <div>Glitch Configuration</div>
+                    <span id="settingsToggleIcon">▼</span>
+                </div>
+                <div id="settingsContent">
+                    <div class="settings-grid">
+                        <div class="settings-row">
+                            <div class="slider-container">
+                                <label>Glitch Intensity</label>
+                                <div class="slider-range">
+                                    <span>Min</span>
+                                    <input type="range" min="1" max="10" value="5" class="slider" id="glitchIntensity">
+                                    <span>Max</span>
+                                    <span id="glitchIntensityValue">5</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-row">
+                            <div class="slider-container">
+                                <label>Character Substitution</label>
+                                <div class="slider-range">
+                                    <span>Low</span>
+                                    <input type="range" min="1" max="10" value="5" class="slider" id="charSubstitution">
+                                    <span>High</span>
+                                    <span id="charSubstitutionValue">5</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-row">
+                            <div class="slider-container">
+                                <label>Text Reversal</label>
+                                <div class="slider-range">
+                                    <span>Low</span>
+                                    <input type="range" min="1" max="10" value="3" class="slider" id="textReversal">
+                                    <span>High</span>
+                                    <span id="textReversalValue">3</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-row">
+                            <div class="slider-container">
+                                <label>Symbol Insertion</label>
+                                <div class="slider-range">
+                                    <span>Low</span>
+                                    <input type="range" min="1" max="10" value="5" class="slider" id="symbolInsertion">
+                                    <span>High</span>
+                                    <span id="symbolInsertionValue">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-grid">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="useRotation" checked>
+                            <label for="useRotation">Rotate Characters</label>
+                        </div>
+                        
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="useInversion" checked>
+                            <label for="useInversion">Invert Segments</label>
+                        </div>
+                        
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="useVertical" checked>
+                            <label for="useVertical">Add Vertical Text</label>
+                        </div>
+                        
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="useDiacritics" checked>
+                            <label for="useDiacritics">Add Diacritics</label>
+                        </div>
+                    </div>
+                    
+                    <div class="preset-buttons">
+                        <button class="preset-btn" data-preset="mild">Mild Glitch</button>
+                        <button class="preset-btn" data-preset="medium">Medium Glitch</button>
+                        <button class="preset-btn" data-preset="extreme">Extreme Glitch</button>
+                        <button class="preset-btn" data-preset="zalgo">Z̴̘̆a̷̞̕l̶̥̎g̵̙͗ô̵͓ Style</button>
+                        <button class="preset-btn" data-preset="reverse">ǝsɹǝʌǝɹ Style</button>
+                        <button class="preset-btn" data-preset="random">Random Settings</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="inputText">Enter Text to Transform:</label>
+                <textarea id="inputText" placeholder="Type your text here woman..."></textarea>
+            </div>
+            
+            <div class="button-row">
+                <div class="button-group">
+                    <button class="button" id="transformBtn">Transform</button>
+                    <button class="button secondary" id="clearBtn">Clear</button>
+                </div>
+                <button class="button secondary" id="saveBtn">Save Output</button>
+            </div>
+            
+            <div class="output-container">
+                <button class="copy-btn" id="copyBtn">Copy</button>
+                <div class="output" id="outputText">Transformed text will appear here...</div>
+            </div>
+        </div>
+        
+        <div class="content" id="saved">
+            <h2>Saved Outputs</h2>
+            <div class="saved-outputs" id="savedOutputsList">
+                <p>No saved outputs yet. Transform some text and save it to see it here.</p>
+            </div>
+        </div>
+        
+        <div class="content" id="about">
+            <div class="about-content">
+                <h2>About Anathema Translator</h2>
+                <h3>gtfo</h3>
+                
+            </div>
+        </div>
+    </div>
+    <script src="ascript.js"></script>
+    <a href="index.html" style="display: block; text-align: center; margin-top: 20px; font-size: 1.5rem; color: #00ffff; text-decoration: none; text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);">
+        Go to Maple
+    </a>
+</body>
+</html>
